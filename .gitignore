@@ -12,3 +12,6 @@
 
 # Ignore .pdf
 *.pdf
+
+# Ignore input.txt
+input.txt
