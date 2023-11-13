@@ -17,7 +17,7 @@ int LCS(char a[], char b[], int n, int m){
                 S[i][j] = 0;
             }
             else{
-                dp[i][j] = max(dp[i-1][j], dp[i][j-1]);
+                dp[i][j] = max(dp[i][j-1], dp[i-1][j]);
                 if(dp[i][j] == dp[i][j-1])
                     S[i][j] = 1;
                 else S[i][j] = 2;
@@ -54,6 +54,7 @@ int main(){
 
         printf("%d ", LCS(a, b, strlen(a), strlen(b)));
         PRINT(a, b, strlen(a), strlen(b));
+        printf("\n");
     }
 
     return 0;
